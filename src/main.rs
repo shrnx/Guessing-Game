@@ -29,11 +29,11 @@ fn main() {
     // println!("{}", guess+1);  Used this to check if no converted to number from string
 
     match guess.cmp(&secret_number) {
-        Ordering::Less => println!("Value is smaller than the secret value"),
-        Ordering::Greater => println!("Value is greater than the secret value"),
+        Ordering::Less => println!("Too Small, Try Again"),
+        Ordering::Greater => println!("Too Big, Try Again"),
         Ordering::Equal => {
-               println!("You guessed {} which is correct bro.", guess);
-               break;
+            println!("You guessed it! {} is correct bro.", guess);
+            break;
         }
     }
     }
